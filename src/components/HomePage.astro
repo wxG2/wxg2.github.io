@@ -1,0 +1,290 @@
+---
+import type { Lang } from '../data/site';
+import { education, experiences, profile, projects, publications, repositories } from '../data/site';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+const { lang } = Astro.props as { lang: Lang };
+const isZh = lang === 'zh';
+const workHref = (slug: string) => isZh ? `/work/${slug}/` : `/en/work/${slug}/`;
+const alternatePath = isZh ? '/en/' : '/';
+const labels = isZh
+  ? {
+      available: '面向 AI 应用开发 / Agent 算法机会',
+      location: '现居杭州',
+      work: '精选项目',
+      workIntro: '从生产级 Agent 到生理信号模型：每个案例都回答一个明确的问题。',
+      view: '查看案例',
+      openSource: '开源项目',
+      research: '论文与研究',
+      experience: '经历',
+      education: '教育与荣誉',
+      contact: '一起构建可靠、可用的 AI。',
+      contactIntro: '我关注 Agent 系统、语音智能与生理信号建模，也乐于讨论工程落地与研究合作。',
+      copy: '复制邮箱',
+      copied: '已复制',
+      email: '发送邮件',
+      code: '查看 GitHub',
+      published: '已发表',
+      review: '在审',
+      repo: '打开仓库',
+    }
+  : {
+      available: 'Open to AI application engineering / agent algorithm roles',
+      location: 'Based in Hangzhou',
+      work: 'Selected work',
+      workIntro: 'From production agents to physiological signal models—each case answers a concrete problem.',
+      view: 'View case',
+      openSource: 'Open source',
+      research: 'Publications & research',
+      experience: 'Experience',
+      education: 'Education & honors',
+      contact: 'Let’s build AI that holds up in the real world.',
+      contactIntro: 'I work across agent systems, speech intelligence, and physiological signal modeling—and welcome engineering or research conversations.',
+      copy: 'Copy email',
+      copied: 'Copied',
+      email: 'Send email',
+      code: 'View GitHub',
+      published: 'Published',
+      review: 'Under review',
+      repo: 'Open repository',
+    };
+---
+
+<Header lang={lang} alternatePath={alternatePath} />
+
+<main id="main-content">
+  <section class="hero shell">
+    <div class="hero-grid">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="status-pulse" aria-hidden="true"></span>{labels.available}</p>
+        <h1>
+          <span class="hero-name">{profile.name[lang]}</span>
+          <span class="hero-title">{profile.title[lang]}</span>
+        </h1>
+        <p class="hero-intro">{profile.intro[lang]}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">{labels.work}<span aria-hidden="true">↓</span></a>
+          <a class="button button-quiet" href={profile.github} target="_blank" rel="noreferrer">GitHub<span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="portrait-panel" data-reveal style="--delay: 90ms">
+        <div class="portrait-frame">
+          <img src="/images/avatar.png" alt={isZh ? '高伟翔的职业头像' : 'Professional portrait of Weixiang Gao'} width="640" height="760" />
+          <span class="portrait-index" aria-hidden="true">01—26</span>
+        </div>
+        <div class="portrait-caption">
+          <span>{profile.location[lang]}</span>
+          <span>{labels.location}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="capability-strip" data-reveal>
+      <article>
+        <span class="capability-number">A</span>
+        <h2>{isZh ? 'Agent 系统' : 'Agent Systems'}</h2>
+        <p>{isZh ? '编排、状态、RAG 与人在回路' : 'Orchestration, state, RAG, and human-in-the-loop'}</p>
+      </article>
+      <article>
+        <span class="capability-number">B</span>
+        <h2>{isZh ? '语音基础设施' : 'Speech Infrastructure'}</h2>
+        <p>{isZh ? '分布式 ASR、可靠性与性能' : 'Distributed ASR, reliability, and performance'}</p>
+      </article>
+      <article>
+        <span class="capability-number">C</span>
+        <h2>{isZh ? '脑电智能' : 'EEG Intelligence'}</h2>
+        <p>{isZh ? '时空建模、生成与跨模态解码' : 'Spatiotemporal modeling, generation, and decoding'}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section shell" id="work">
+    <div class="section-heading" data-reveal>
+      <p class="section-index">01 / WORK</p>
+      <div>
+        <h2>{labels.work}</h2>
+        <p>{labels.workIntro}</p>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      {projects.map((project, index) => (
+        <a class={`project-card project-card--${project.accent}`} href={workHref(project.slug)} data-reveal style={`--delay: ${(index % 2) * 70}ms`}>
+          <div class="project-card-topline">
+            <span>{project.index}</span>
+            <span>{project.category === 'engineering' ? (isZh ? '工程' : 'Engineering') : (isZh ? '研究' : 'Research')}</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-eyebrow">{project.eyebrow[lang]}</p>
+            <h3>{project.title[lang]}</h3>
+            <p>{project.summary[lang]}</p>
+          </div>
+          <div class="project-card-metrics" aria-label={isZh ? '关键指标' : 'Key metrics'}>
+            {project.metrics.slice(0, 2).map((metric) => (
+              <span><strong>{metric.value}</strong><small>{metric.label[lang]}</small></span>
+            ))}
+          </div>
+          <div class="project-card-footer">
+            <span>{project.period[lang]}</span>
+            <strong>{labels.view} <span aria-hidden="true">↗</span></strong>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section-ink" aria-labelledby="opensource-heading">
+    <div class="shell">
+      <div class="section-heading section-heading--light" data-reveal>
+        <p class="section-index">02 / CODE</p>
+        <div>
+          <h2 id="opensource-heading">{labels.openSource}</h2>
+          <p>{isZh ? '可以继续阅读、运行和讨论的公开项目。' : 'Public projects you can inspect, run, and discuss.'}</p>
+        </div>
+      </div>
+      <div class="repo-list">
+        {repositories.map((repo, index) => (
+          <a href={repo.href} target="_blank" rel="noreferrer" class="repo-row" data-reveal style={`--delay: ${index * 55}ms`}>
+            <span class="repo-index">0{index + 1}</span>
+            <span class="repo-name">{repo.name}</span>
+            <span class="repo-description">{repo.description[lang]}</span>
+            <span class="repo-language">{repo.language}</span>
+            <span class="repo-arrow" aria-label={labels.repo}>↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="research">
+    <div class="section-heading" data-reveal>
+      <p class="section-index">03 / RESEARCH</p>
+      <div>
+        <h2>{labels.research}</h2>
+        <p>{isZh ? '以可验证的实验回答脑电诊断与生成问题。' : 'Evidence-driven work on EEG diagnosis and generation.'}</p>
+      </div>
+    </div>
+    <div class="publication-list">
+      {publications.map((publication, index) => {
+        const content = (
+          <>
+            <div class="publication-meta">
+              <span class={`publication-status publication-status--${publication.status}`}>
+                {publication.status === 'published' ? labels.published : labels.review}
+              </span>
+              <span>{publication.year}</span>
+            </div>
+            <div class="publication-body">
+              <p>{publication.venue[lang]}</p>
+              <h3>{publication.title}</h3>
+              <p class="publication-authors">{publication.authors}</p>
+              <p class="publication-description">{publication.description[lang]}</p>
+            </div>
+            <span class="publication-arrow" aria-hidden="true">{publication.href ? '↗' : '—'}</span>
+          </>
+        );
+        return publication.href ? (
+          <a class="publication-row" href={publication.href} target="_blank" rel="noreferrer" data-reveal style={`--delay: ${index * 70}ms`}>{content}</a>
+        ) : (
+          <article class="publication-row" data-reveal style={`--delay: ${index * 70}ms`}>{content}</article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section shell" id="experience">
+    <div class="section-heading" data-reveal>
+      <p class="section-index">04 / PATH</p>
+      <div><h2>{labels.experience}</h2></div>
+    </div>
+    <div class="timeline">
+      {experiences.map((item, index) => (
+        <article class="timeline-item" data-reveal style={`--delay: ${index * 70}ms`}>
+          <div class="timeline-marker"><span></span></div>
+          <p class="timeline-period">{item.period[lang]}</p>
+          <div class="timeline-content">
+            <h3>{item.company[lang]}</h3>
+            <p class="timeline-role">{item.role[lang]}</p>
+            <p>{item.summary[lang]}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section shell education-section">
+    <div class="section-heading" data-reveal>
+      <p class="section-index">05 / EDUCATION</p>
+      <div><h2>{labels.education}</h2></div>
+    </div>
+    <div class="education-grid">
+      {education.map((item, index) => (
+        <article data-reveal style={`--delay: ${index * 70}ms`}>
+          <p class="education-period">{item.period[lang]}</p>
+          <h3>{item.school[lang]}</h3>
+          <p class="education-degree">{item.degree[lang]}</p>
+          <p>{item.detail[lang]}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="shell contact-grid" data-reveal>
+      <p class="section-index">06 / CONTACT</p>
+      <div>
+        <h2>{labels.contact}</h2>
+        <p>{labels.contactIntro}</p>
+        <div class="contact-actions">
+          <a class="button button-light" href={`mailto:${profile.email}`}>{labels.email}<span aria-hidden="true">↗</span></a>
+          <button class="button button-outline-light" type="button" data-copy-email data-email={profile.email} data-copy-label={labels.copy} data-copied-label={labels.copied}>
+            <span>{labels.copy}</span><span aria-hidden="true">＋</span>
+          </button>
+        </div>
+      </div>
+      <a class="contact-email" href={`mailto:${profile.email}`}>{profile.email}</a>
+    </div>
+  </section>
+</main>
+
+<Footer lang={lang} />
+
+<script is:inline>
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealItems = document.querySelectorAll('[data-reveal]');
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach((item) => observer.observe(item));
+  }
+
+  const header = document.querySelector('[data-header]');
+  const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  document.querySelectorAll('[data-copy-email]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const email = button.getAttribute('data-email');
+      const label = button.querySelector('span');
+      if (!email || !label) return;
+      try {
+        await navigator.clipboard.writeText(email);
+        label.textContent = button.getAttribute('data-copied-label') || 'Copied';
+        window.setTimeout(() => { label.textContent = button.getAttribute('data-copy-label') || 'Copy email'; }, 1800);
+      } catch {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  });
+</script>
