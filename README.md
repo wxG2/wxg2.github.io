@@ -1,22 +1,7 @@
 # Weixiang Gao — Portfolio
 
-Bilingual static portfolio for Weixiang Gao, an AI application engineer and EEG researcher.
+Production snapshot for <https://wxg2.github.io/>.
 
-- Chinese: `https://wxg2.github.io/`
-- English: `https://wxg2.github.io/en/`
-- Stack: Astro, TypeScript, GitHub Pages
+The site is an English-first academic and engineering portfolio positioned at **Research × Generative AI × AI Systems**. This public repository intentionally contains only disclosure-reviewed static output. Private research sources, internal evidence ledgers, company materials, and unpublished assets remain outside the repository.
 
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-## Production build
-
-```bash
-npm run build
-```
-
-Pushes to `main` are deployed through GitHub Actions.
+The canonical Astro and content source is maintained in the owner's private local workspace. Pushes to `main` deploy the audited `site/` artifact through GitHub Pages.
