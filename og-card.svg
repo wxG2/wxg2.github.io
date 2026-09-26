@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Weixiang Gao — Research, Generative AI, and AI Systems">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#faf9f5" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="85%" cy="8%" r="80%">
+      <stop stop-color="#d97757" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#d97757" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x2="1" y2="1">
+      <stop stop-color="#d97757" stop-opacity=".12"/>
+      <stop offset=".55" stop-color="#faf9f5" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#faf9f5" stop-opacity=".025"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#141413"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="65" y="65" width="1070" height="500" rx="23" fill="url(#glass)" stroke="#faf9f5" stroke-opacity=".2"/>
+  <rect x="105" y="65" width="85" height="3" fill="#d97757"/>
+  <text x="116" y="160" fill="#ec9d79" font-family="Menlo, Consolas, monospace" font-size="17" letter-spacing="2">WEIXIANG GAO / 高伟翔</text>
+  <text x="112" y="318" fill="#faf9f5" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="bold" letter-spacing="-5">Weixiang Gao</text>
+  <text x="116" y="390" fill="#e2dbd1" font-family="Arial, Helvetica, sans-serif" font-size="31">Research × Generative AI × AI Systems</text>
+  <path d="M116 442H1084" stroke="#faf9f5" stroke-opacity=".18"/>
+  <text x="116" y="507" fill="#bcb5aa" font-family="Menlo, Consolas, monospace" font-size="17" letter-spacing="1">GENERATIVE AI  ·  MULTIMODAL LEARNING  ·  AI AGENTS</text>
+</svg>
