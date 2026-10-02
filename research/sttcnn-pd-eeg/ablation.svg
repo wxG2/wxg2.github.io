@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">STTCNN component ablation accuracy</title>
+  <desc id="desc">Five model settings from the paper's Figure 8. Full STTCNN scored 92.11 and 91.20 percent. Removing topology scored 91.52 and 89.79; temporal branch 91.70 and 90.81; spatial branch 91.25 and 90.97; fusion 81.06 and 77.91. The first number in each pair is Parkinson's OFF versus control, the second ON versus control.</desc>
+  <rect width="1200" height="675" fill="#fffaf5"/>
+  <text x="43" y="54" fill="#a95018" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3">PUBLISHED RESULT  /  ABLATION</text>
+  <text x="43" y="111" fill="#292522" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="700">What each component contributes</text>
+  <text x="43" y="148" fill="#6e6862" font-family="Arial,Helvetica,sans-serif" font-size="20">Classification accuracy (%) · bars start at zero · values from paper Figure 8</text>
+  <rect x="339" y="173" width="22" height="22" rx="5" fill="#3b7f9a"/><text x="372" y="191" fill="#365d6c" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700">PD OFF vs control</text>
+  <rect x="757" y="173" width="22" height="22" rx="5" fill="#d78242"/><text x="790" y="191" fill="#8d522d" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700">PD ON vs control</text>
+
+  <g font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#292522">
+    <text x="43" y="248" font-weight="700">Complete STTCNN</text>
+    <text x="43" y="322">Without topology</text>
+    <text x="43" y="396">Without temporal branch</text>
+    <text x="43" y="470">Without spatial branch</text>
+    <text x="43" y="544">Without feature fusion</text>
+  </g>
+  <g fill="#e7e4df">
+    <rect x="339" y="226" width="290" height="25" rx="12"/><rect x="757" y="226" width="290" height="25" rx="12"/>
+    <rect x="339" y="300" width="290" height="25" rx="12"/><rect x="757" y="300" width="290" height="25" rx="12"/>
+    <rect x="339" y="374" width="290" height="25" rx="12"/><rect x="757" y="374" width="290" height="25" rx="12"/>
+    <rect x="339" y="448" width="290" height="25" rx="12"/><rect x="757" y="448" width="290" height="25" rx="12"/>
+    <rect x="339" y="522" width="290" height="25" rx="12"/><rect x="757" y="522" width="290" height="25" rx="12"/>
+  </g>
+  <g fill="#3b7f9a">
+    <rect x="339" y="226" width="267" height="25" rx="12"/><rect x="339" y="300" width="265" height="25" rx="12"/>
+    <rect x="339" y="374" width="266" height="25" rx="12"/><rect x="339" y="448" width="265" height="25" rx="12"/>
+    <rect x="339" y="522" width="235" height="25" rx="12"/>
+  </g>
+  <g fill="#d78242">
+    <rect x="757" y="226" width="264" height="25" rx="12"/><rect x="757" y="300" width="260" height="25" rx="12"/>
+    <rect x="757" y="374" width="263" height="25" rx="12"/><rect x="757" y="448" width="264" height="25" rx="12"/>
+    <rect x="757" y="522" width="226" height="25" rx="12"/>
+  </g>
+  <g fill="#292522" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700">
+    <text x="648" y="247">92.11</text><text x="1066" y="247">91.20</text>
+    <text x="648" y="321">91.52</text><text x="1066" y="321">89.79</text>
+    <text x="648" y="395">91.70</text><text x="1066" y="395">90.81</text>
+    <text x="648" y="469">91.25</text><text x="1066" y="469">90.97</text>
+    <text x="648" y="543">81.06</text><text x="1066" y="543">77.91</text>
+  </g>
+  <path d="M43 576h1114" stroke="#d8c9b8"/>
+  <text x="43" y="615" fill="#6e6862" font-family="Arial,Helvetica,sans-serif" font-size="18">PD OFF and PD ON were evaluated separately against matched controls in five-fold cross-validation.</text>
+  <text x="43" y="645" fill="#6e6862" font-family="Arial,Helvetica,sans-serif" font-size="18">The large fusion ablation loss is a result on this cohort, not a claim of clinical deployment readiness.</text>
+</svg>

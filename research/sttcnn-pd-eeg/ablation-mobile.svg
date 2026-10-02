@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1030" role="img" aria-labelledby="title desc">
+  <title id="title">STTCNN ablation accuracy, mobile layout</title>
+  <desc id="desc">Accuracy in percent for full STTCNN and four ablations. The first value in each row is PD OFF versus control, the second is PD ON versus control.</desc>
+  <rect width="600" height="1030" fill="#fffaf5"/>
+  <text x="25" y="44" fill="#a95018" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="2">PUBLISHED RESULT / ABLATION</text>
+  <text x="25" y="86" fill="#292522" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700">Component accuracy</text>
+  <text x="25" y="116" fill="#6e6862" font-family="Arial,Helvetica,sans-serif" font-size="19">Paper Figure 8 values, redrawn</text>
+  <circle cx="40" cy="151" r="10" fill="#3b7f9a"/><text x="58" y="158" fill="#365d6c" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700">PD OFF vs control</text>
+  <circle cx="337" cy="151" r="10" fill="#d78242"/><text x="355" y="158" fill="#8d522d" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700">PD ON vs control</text>
+
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="25" y="183" width="550" height="137" rx="18" fill="#f4f0eb"/>
+    <text x="46" y="219" fill="#292522" font-size="26" font-weight="700">Complete STTCNN</text>
+    <rect x="46" y="238" width="240" height="12" rx="6" fill="#d6e3e5"/><rect x="46" y="238" width="221" height="12" rx="6" fill="#3b7f9a"/>
+    <rect x="315" y="238" width="240" height="12" rx="6" fill="#efdfd0"/><rect x="315" y="238" width="219" height="12" rx="6" fill="#d78242"/>
+    <text x="46" y="287" fill="#365d6c" font-size="27" font-weight="700">92.11%</text><text x="315" y="287" fill="#8d522d" font-size="27" font-weight="700">91.20%</text>
+
+    <rect x="25" y="333" width="550" height="137" rx="18" fill="#f4f0eb"/>
+    <text x="46" y="369" fill="#292522" font-size="26" font-weight="700">Without topology</text>
+    <rect x="46" y="388" width="240" height="12" rx="6" fill="#d6e3e5"/><rect x="46" y="388" width="220" height="12" rx="6" fill="#3b7f9a"/>
+    <rect x="315" y="388" width="240" height="12" rx="6" fill="#efdfd0"/><rect x="315" y="388" width="216" height="12" rx="6" fill="#d78242"/>
+    <text x="46" y="437" fill="#365d6c" font-size="27" font-weight="700">91.52%</text><text x="315" y="437" fill="#8d522d" font-size="27" font-weight="700">89.79%</text>
+
+    <rect x="25" y="483" width="550" height="137" rx="18" fill="#f4f0eb"/>
+    <text x="46" y="519" fill="#292522" font-size="26" font-weight="700">Without temporal branch</text>
+    <rect x="46" y="538" width="240" height="12" rx="6" fill="#d6e3e5"/><rect x="46" y="538" width="220" height="12" rx="6" fill="#3b7f9a"/>
+    <rect x="315" y="538" width="240" height="12" rx="6" fill="#efdfd0"/><rect x="315" y="538" width="218" height="12" rx="6" fill="#d78242"/>
+    <text x="46" y="587" fill="#365d6c" font-size="27" font-weight="700">91.70%</text><text x="315" y="587" fill="#8d522d" font-size="27" font-weight="700">90.81%</text>
+
+    <rect x="25" y="633" width="550" height="137" rx="18" fill="#f4f0eb"/>
+    <text x="46" y="669" fill="#292522" font-size="26" font-weight="700">Without spatial branch</text>
+    <rect x="46" y="688" width="240" height="12" rx="6" fill="#d6e3e5"/><rect x="46" y="688" width="219" height="12" rx="6" fill="#3b7f9a"/>
+    <rect x="315" y="688" width="240" height="12" rx="6" fill="#efdfd0"/><rect x="315" y="688" width="218" height="12" rx="6" fill="#d78242"/>
+    <text x="46" y="737" fill="#365d6c" font-size="27" font-weight="700">91.25%</text><text x="315" y="737" fill="#8d522d" font-size="27" font-weight="700">90.97%</text>
+
+    <rect x="25" y="783" width="550" height="137" rx="18" fill="#f4f0eb"/>
+    <text x="46" y="819" fill="#292522" font-size="26" font-weight="700">Without feature fusion</text>
+    <rect x="46" y="838" width="240" height="12" rx="6" fill="#d6e3e5"/><rect x="46" y="838" width="195" height="12" rx="6" fill="#3b7f9a"/>
+    <rect x="315" y="838" width="240" height="12" rx="6" fill="#efdfd0"/><rect x="315" y="838" width="187" height="12" rx="6" fill="#d78242"/>
+    <text x="46" y="887" fill="#365d6c" font-size="27" font-weight="700">81.06%</text><text x="315" y="887" fill="#8d522d" font-size="27" font-weight="700">77.91%</text>
+  </g>
+  <text x="26" y="963" fill="#6e6862" font-family="Arial,Helvetica,sans-serif" font-size="19">Bars start at zero; experiments use five-fold CV.</text>
+  <text x="26" y="994" fill="#6e6862" font-family="Arial,Helvetica,sans-serif" font-size="19">This cohort does not establish clinical readiness.</text>
+</svg>
