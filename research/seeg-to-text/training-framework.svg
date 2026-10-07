@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc"><title id="title">sEEG-to-text: training framework</title><desc id="desc">Separate objectives during pre-training; signal-conditioned language generation during fine-tuning</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L8 4.5L0 9" fill="none" stroke="#8795A3" stroke-width="1.3"/></marker></defs><rect width="1280" height="720" fill="#fff"/>
+<text x="32" y="53" font-family="Arial, sans-serif" font-size="34" font-weight="600" fill="#243445" text-anchor="start">sEEG-to-text: training framework</text>
+<text x="32" y="91" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#566574" text-anchor="start">Separate objectives during pre-training; signal-conditioned language generation during fine-tuning</text>
+<rect x="32" y="112" width="1216" height="380" rx="6" fill="#FAFBFC" stroke="#D8DFE5"/>
+<text x="56" y="149" font-family="Arial, sans-serif" font-size="21" font-weight="600" fill="#243445" text-anchor="start">A  ·  REPRESENTATION PRE-TRAINING</text>
+<rect x="32" y="514" width="1216" height="174" rx="6" fill="#FAFBFC" stroke="#D8DFE5"/>
+<text x="56" y="551" font-family="Arial, sans-serif" font-size="21" font-weight="600" fill="#243445" text-anchor="start">B  ·  GENERATION FINE-TUNING</text>
+<polyline points="222,229 256,229" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="430,229 465,229" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="649,229 681,229" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="855,229 912,229" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="343,268 343,304" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="430,333 465,333" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="837,333 912,333" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="222,434 256,434" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="650,434 681,434" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="855,434 1230,434 1230,229 1208,229" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="222,615 256,615" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="650,615 689,615" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<polyline points="1011,615 1043,615" fill="none" stroke="#8795A3" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="56" y="190" width="166" height="78" rx="6" fill="#FFFFFF" stroke="#B6C0C9" stroke-width="1.3"/>
+<text x="139" y="223" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">sEEG</text>
+<text x="139" y="251" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">segments</text>
+<rect x="256" y="190" width="174" height="78" rx="6" fill="#EDF3FA" stroke="#7796BD" stroke-width="1.3"/>
+<text x="343" y="237" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">CNN encoder</text>
+<rect x="465" y="190" width="184" height="78" rx="6" fill="#EDF3FA" stroke="#7796BD" stroke-width="1.3"/>
+<text x="557" y="223" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">Transformer</text>
+<text x="557" y="251" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">encoder</text>
+<rect x="681" y="190" width="174" height="78" rx="6" fill="#EDF3FA" stroke="#7796BD" stroke-width="1.3"/>
+<text x="768" y="223" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">sEEG hidden</text>
+<text x="768" y="251" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">states</text>
+<rect x="912" y="190" width="296" height="78" rx="6" fill="#FBF2E9" stroke="#C89B6C" stroke-width="1.3"/>
+<text x="1060" y="223" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">Contrastive alignment</text>
+<text x="1060" y="251" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">InfoNCE objective</text>
+<rect x="256" y="304" width="174" height="58" rx="6" fill="#FFFFFF" stroke="#B6C0C9" stroke-width="1.3"/>
+<text x="343" y="341" font-family="Arial, sans-serif" font-size="19" font-weight="600" fill="#243445" text-anchor="middle">Random masking</text>
+<rect x="465" y="304" width="372" height="58" rx="6" fill="#EDF3FA" stroke="#7796BD" stroke-width="1.3"/>
+<text x="651" y="327" font-family="Arial, sans-serif" font-size="21" font-weight="600" fill="#243445" text-anchor="middle">Reconstruction branch</text>
+<text x="651" y="355" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#566574" text-anchor="middle">Transformer encoder → decoder</text>
+<rect x="912" y="304" width="296" height="58" rx="6" fill="#FBF2E9" stroke="#C89B6C" stroke-width="1.3"/>
+<text x="1060" y="327" font-family="Arial, sans-serif" font-size="21" font-weight="600" fill="#243445" text-anchor="middle">Reconstruction loss</text>
+<text x="1060" y="355" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#566574" text-anchor="middle">MSE vs. original signal</text>
+<rect x="56" y="401" width="166" height="66" rx="6" fill="#FFFFFF" stroke="#B6C0C9" stroke-width="1.3"/>
+<text x="139" y="442" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">Paired text</text>
+<rect x="256" y="401" width="394" height="66" rx="6" fill="#F0F6F2" stroke="#809F8D" stroke-width="1.3"/>
+<text x="453" y="428" font-family="Arial, sans-serif" font-size="23" font-weight="600" fill="#243445" text-anchor="middle">BART-Chinese text encoder</text>
+<text x="453" y="456" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#566574" text-anchor="middle">Frozen during pre-training</text>
+<rect x="681" y="401" width="174" height="66" rx="6" fill="#F0F6F2" stroke="#809F8D" stroke-width="1.3"/>
+<text x="768" y="428" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">Text hidden</text>
+<text x="768" y="456" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">states</text>
+<rect x="56" y="576" width="166" height="78" rx="6" fill="#FFFFFF" stroke="#B6C0C9" stroke-width="1.3"/>
+<text x="139" y="609" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">sEEG</text>
+<text x="139" y="637" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">segments</text>
+<rect x="256" y="576" width="394" height="78" rx="6" fill="#EDF3FA" stroke="#7796BD" stroke-width="1.3"/>
+<text x="453" y="609" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#243445" text-anchor="middle">Pre-trained sEEG encoder</text>
+<text x="453" y="637" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#566574" text-anchor="middle">CNN–Transformer</text>
+<rect x="689" y="576" width="322" height="78" rx="6" fill="#EDF3FA" stroke="#7796BD" stroke-width="1.3"/>
+<text x="850" y="609" font-family="Arial, sans-serif" font-size="23" font-weight="600" fill="#243445" text-anchor="middle">BART-Chinese decoder</text>
+<text x="850" y="637" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#566574" text-anchor="middle">Cross-attention · LoRA r=8</text>
+<rect x="1043" y="576" width="174" height="78" rx="6" fill="#F0F6F2" stroke="#809F8D" stroke-width="1.3"/>
+<text x="1130" y="609" font-family="Arial, sans-serif" font-size="23" font-weight="600" fill="#243445" text-anchor="middle">Chinese text</text>
+<text x="1130" y="637" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#566574" text-anchor="middle">Autoregressive</text>
+</svg>
